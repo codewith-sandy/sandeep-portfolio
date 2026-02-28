@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animated Gradient Background */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(circle at 10% 30%, rgba(0, 183, 255, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(0, 183, 255, 0.15), transparent 40%),
+    linear-gradient(135deg, #020617, #0a1a3a 40%, #020617 100%);
+  background-attachment: fixed;
+  color: white;
+}
+/* Wave animation */
+@keyframes waveMotion {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-wave {
+  animation: waveMotion 6s ease-in-out infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
